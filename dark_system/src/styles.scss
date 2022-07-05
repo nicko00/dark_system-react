@@ -1,0 +1,25 @@
+
+.star{
+  width: 5px;
+  height: 5px;
+  border-radius: 50px;
+  position: absolute;
+  background-color: white;
+}
+    
+@for $i from 1 through 1000{
+  .star:nth-child(#{$i}){
+        left: random(100) / 100 * 100%;
+        top: random(100) / 100 * 100%;
+        animation: flick (random(70)+20)+s infinite;
+    }
+}
+
+@keyframes flick {
+    0%, 100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+}

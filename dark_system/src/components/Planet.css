@@ -5,26 +5,22 @@
 }
 
 .sphere{
-    background: radial-gradient(circle at 80% 10%, #5e5e5e, #000000);
+    background-image: url("../img/planet_txt.png");
+    background-color: rgba(0, 0, 0, 0.26);
     border-radius: 50%;
+    background-repeat: repeat;
     width: 350px;
     height: 350px;
     background-size: 200%;
-    animation: pltRotate 50s 0s infinite;
-    box-shadow: inset 10px 2px 20px var(--color-black), 1px 1px 5px var(--color-whiteShade);
-}
+    animation: pltRotate 150s infinite;
+    transform: rotateZ(-25deg);
+    box-shadow: inset 60px 2px 60px var(--color-black), 1px 1px 5px var(--color-whiteShade), inset -20px -2px 60px var(--color-black)}
 
 @keyframes pltRotate{
-    0%, 100% { 
-        background-position: 0% 70%; 
-    };
-    25% {
-        background-position: 30% 70%;
-      }
-      50% {
-        background-position: 50% 70%;
-      }
-      75% {
-        background-position: 70% 70%;
-      }
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+      background-position: 100% 0;
+  }
 }
